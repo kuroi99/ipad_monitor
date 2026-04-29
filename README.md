@@ -33,8 +33,7 @@ python3 main.py
 `main.py`の以下の部分を編集してください：
 
 ```python
-TARGET_KEYWORDS = ["iPad Air", "iPad Pro"]
-SUB_KEYWORD = "第3世代"
+KEYWORD = "第3世代"
 ```
 
 ## 注意事項
