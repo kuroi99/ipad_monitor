@@ -9,8 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-TARGET_KEYWORDS = ["iPad Air", "iPad Pro"]
-SUB_KEYWORD = "第3世代"
+KEYWORD = "第3世代"
 
 url = "https://www.apple.com/jp/shop/refurbished/ipad"
 headers = {
@@ -65,7 +64,7 @@ while True:
         price_tag = product.find_next("div", class_="as-price-currentprice")
         price = price_tag.get_text().strip() if price_tag else "価格不明"
 
-        if "iPad Air" in name or ("iPad Pro" in name and SUB_KEYWORD in name):
+        if "iPad Air" in name or ("iPad Pro" in name and KEYWORD in name):
             if name not in seen:
                 print(f"*新着ヒット!!: {name} / {price}")
                 send_notification("iPad入荷!", f"{name} / {price}")
